@@ -1,0 +1,12 @@
+/* boards/xg24_dk2601b.overlay */
+
+/* Root node changes */
+/ {
+	/* Aliases */
+	aliases {
+		/* Add output device aliases */
+		red = &red_led;
+		green = &green_led;
+		blue = &blue_led;
+	};
+};

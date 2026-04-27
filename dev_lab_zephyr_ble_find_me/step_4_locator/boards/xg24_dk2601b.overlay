@@ -1,0 +1,65 @@
+/* boards/xg24_dk2601b.overlay */
+
+/* Needed for PWM_HZ() and PWM_POLARITY_* */
+#include <zephyr/dt-bindings/pwm/pwm.h>
+
+/* Root node changes */
+/ {
+	/* Aliases */
+	aliases {
+		/* Add output device aliases */
+		piezo = &piezo_pwm;
+		red = &red_led;
+		green = &green_led;
+		blue = &blue_led;
+
+		/* Delete pwm led aliases (so they don't overide leds on gpios) */
+		/delete-property/ pwm-led0;
+		/delete-property/ pwm-led1;
+		/delete-property/ pwm-led2;
+		/delete-property/ red-pwm-led;
+		/delete-property/ green-pwm-led;
+		/delete-property/ blue-pwm-led;
+	};
+
+	/* Add pwm piezo sounder using low energy timer */
+	pwmpiezos {
+		/* Must have a compatible to use pwms, being lazy and reusing pwm-leds */
+		compatible = "pwm-leds";
+
+		/* PWM consumer node for the piezo */
+		piezo_pwm: piezo_pwm {
+			pwms = <&letimer0_pwm 0 PWM_HZ(262) PWM_POLARITY_NORMAL>;
+		};
+	};
+
+	/* Delete pwm leds (so they don't overide leds on gpios) */
+	/delete-node/ pwmleds;
+};
+
+/* LETIMER0 PWM controller node */
+&letimer0 {
+	status = "okay";
+
+	letimer0_pwm: pwm {
+		pinctrl-0 = <&letimer0_default>;
+		pinctrl-names = "default";
+		status = "okay";
+	};
+};
+
+/* Pins for LETIMER0 */
+&pinctrl {
+	/* Pinctrl configuration for LETIMER0 */
+	letimer0_default: letimer0_default {
+		group0 {
+			pins = <LETIMER0_OUT0_PA7>;
+			drive-push-pull;
+			output-high;
+		};
+	};
+};
+
+/* Delete timer0 nodes so LED pins are no longer assigned for pwm use */
+/delete-node/ &timer0;
+/delete-node/ &timer0_default;
