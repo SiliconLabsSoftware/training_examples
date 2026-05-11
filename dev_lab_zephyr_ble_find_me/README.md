@@ -2,7 +2,9 @@
 
 ## About
 
-This folder accompanies a series of Dev Lab videos that provide a practical, step-by-step introduction to developing Bluetooth LE applications using [Zephyr](https://www.zephyrproject.org/) on Silicon Labs low-power wireless microcontrollers.
+![0-Zephyr-BLE-360p](images/0-Zephyr-BLE-360p.png)
+
+This folder accompanies a series of six Dev Lab videos that provide a practical, step-by-step introduction to developing Bluetooth LE applications using [Zephyr](https://www.zephyrproject.org/) on Silicon Labs low-power wireless microcontrollers. The first video is available on [YouTube](https://youtu.be/Kt_tzDwJqrE), with links to other videos being added in the video description as they are released.
 
 In this series we build a Bluetooth LE key finder application based on the [Bluetooth SIG](https://www.bluetooth.com/) [Find Me Profile](https://www.bluetooth.com/specifications/specs/find-me-profile-1-0/) specification.
 
@@ -41,6 +43,8 @@ You will need to have a Zephyr installation to follow these Dev Labs, Silicon La
 The Dev Lab is divided into six main steps, each having its own video. Some steps are further divided into sub-steps. Each step or sub-step has its own folder in this repository with each folder having files for a complete application. In addition to code walkthroughs in the videos you can use a difference tool to examine the code changes between each step or sub-step. An overview of each step is given below.
 
 ### Step 1: Device Information Service
+
+The video for this step can be found on [YouTube](https://youtu.be/Kt_tzDwJqrE).
 
 In this step we explore the [Device Information Service sample application](https://docs.zephyrproject.org/latest/samples/bluetooth/peripheral_dis/README.html#ble_peripheral_dis), provided in the Zephyr installation, to use as a starting point for our application as it operates as a Bluetooth peripheral, allowing connections and also the commonly used Device Information Service which contains hardware and software identification and version information.
 

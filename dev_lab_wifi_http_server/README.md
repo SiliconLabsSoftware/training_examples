@@ -20,7 +20,7 @@ This project-based Dev Lab walks through the creation of a Wi-Fi HTTP Server usi
 
 ![thumbnail](images/dev_lab_sleeping_wifi_http_server_360p.png)
 
-This video is coming soon and provides step-by-step instructions for adding sleep modes to the HTTP Server in order to save power. It covers:
+This video provides step-by-step instructions for adding sleep modes to the HTTP Server in order to save power. It covers:
 
 * How to measure power using Simplicity Studio's Energy Profiler
 * How to enable the Network Wireless Processor (NWP) sleep modes using code

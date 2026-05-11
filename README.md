@@ -4,6 +4,14 @@ This repository contains various training examples based on Silicon Labs Hardwar
 
 ## Examples ##
 
+### [Dev Lab - Zephyr Bluetooth Find Me](dev_lab_zephyr_ble_find_me)
+
+![zephyr_ble_find_me_200p](images/zephyr_ble_find_me_200p.png)
+
+This project-based Dev Lab walks through the creation of a Bluetooth LE key finder application using Zephyr on Silicon Labs low-power wireless microcontrollers. The application is based on the Bluetooth SIG Find Me Profile and progresses from a simple BLE peripheral to a complete system supporting Target Mode, Locator Mode, alert clearing, and low power operation.
+
+The code and step-by-step README for this Dev Lab are available in the [`dev_lab_zephyr_ble_find_me`](dev_lab_zephyr_ble_find_me) folder.
+
 ### [Dev Lab - SiWG917 Sleeping Wi-Fi HTTP Server](dev_lab_wifi_http_server/README.md)
 
 ![Dev Lab - SiWG917 Wi-Fi HTTP Server](images/dev_lab_wifi_http_server_200p.png)
